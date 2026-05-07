@@ -36,15 +36,26 @@ public class Main {
                     int ano = scanner.nextInt();
                     scanner.nextLine();
 
-                    Carro novo = new Carro(marca, modelo, ano);
+                    System.out.println("Digite o nome do dono do carro: ");
+                    String nomeDono = scanner.nextLine();
 
-                    if(novo.getAno() == 0){
+                    System.out.println("Digite o CPF do dono do carro: ");
+                    String cpfDono = scanner.nextLine();
+
+
+                    Dono dono = new Dono(nomeDono, cpfDono);
+                    Carro novo = new Carro(marca, modelo, ano, dono);
+
+                    if (!novo.setAno(ano)) {
                         System.out.println("Carro não cadastrado devido ao ano inválido.");
                         break;
                     }
-                    else {
-                    carros.add(novo);
+                    
+                    if (cpfDono.length() != 11){
+                        System.out.println("Carro não cadastrado devido ao CPF inválido.");
+                        break;
                     }
+                        carros.add(novo);
 
                     System.out.println("\nCarro cadastrado!");
                     break;
@@ -53,12 +64,36 @@ public class Main {
                     if (carros.isEmpty()) {
                         System.out.println("\nNenhum carro cadastrado.");
                     } else {
-                        for (Carro carro : carros) {
-                            System.out.println("Marca: " + carro.getMarca());
-                            System.out.println("Modelo: " + carro.getModelo());
-                            System.out.println("Ano: " + carro.getAno());
+                        System.out.println("Digite 1 para listar todos os carros ou 2 para listar por marca: ");
+                        int escolha = scanner.nextInt();
+                        scanner.nextLine();
+
+                            if (escolha == 1){
+                                for(int i = 0; i < carros.size(); i++){
+                                    System.out.println("Carro #" + (i + 1) + ":");
+                                    carros.get(i).status();
+                                }
                             System.out.println("-----------------------------");
-                            
+                        
+                    }
+                        else if(escolha == 2){
+                            System.out.println("Digite a marca que deseja listar: ");
+                            String marcaListar = scanner.nextLine();
+                            boolean encontrado = false;
+
+                            for (Carro carro : carros) {
+                                if (carro.getMarca().equalsIgnoreCase(marcaListar)) {
+                                    carro.status();
+                                    System.out.println("-----------------------------");
+                                    encontrado = true;
+                                }
+                            }
+                            if (!encontrado) {
+                                System.out.println("Nenhum carro encontrado para a marca informada.");
+                            }
+                        }
+                        else {
+                            System.out.println("Opção inválida!");
                         }
                     }
                     break;
@@ -95,14 +130,31 @@ public class Main {
                         int novoAno = scanner.nextInt();
                         scanner.nextLine();
 
-                            carroAtualizar.setMarca(novaMarca);
-                            carroAtualizar.setModelo(novoModelo);
-                            carroAtualizar.setAno(novoAno);
+                        System.out.println("Digite o novo nome do dono do carro: ");
+                        String novoNomeDono = scanner.nextLine();
 
-                            System.out.println("Carro atualizado!");
+                        System.out.println("Digite o novo CPF do dono do carro: ");
+                        String novoCpfDono = scanner.nextLine();
+
+                        if (!carroAtualizar.setAno(novoAno)) {
+                            System.out.println("Atualização cancelada.");
+                            break;
                         }
 
-                     else {
+                        if (novoCpfDono.length() != 11) {
+                            System.out.println("CPF inválido! Atualização cancelada.");
+                            break;
+                        }
+
+                        carroAtualizar.setMarca(novaMarca);
+                        carroAtualizar.setModelo(novoModelo);
+                        carroAtualizar.getDono().setNome(novoNomeDono);
+                        carroAtualizar.getDono().setCPF(novoCpfDono);
+
+                        System.out.println("Carro atualizado!");
+                    }
+
+                    else {
                         System.out.println("Número inválido!");
                     }
                     break;
