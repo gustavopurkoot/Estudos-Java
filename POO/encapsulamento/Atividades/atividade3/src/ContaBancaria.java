@@ -29,15 +29,16 @@ public class ContaBancaria {
     }
 
     public void sacar(double valor) {
-        if (valor > 0) {
+        if (valor > 0 && valor <= saldo) {
             saldo -= valor;
             System.out.println("Saque de R$" + valor + " realizado com sucesso.");
-
+        } else {
+            System.out.println("Valor de saque inválido ou saldo insuficiente.");
         }
 
     }
 
-    public void ExibirSaldo() {
+    public void exibirSaldo() {
         System.out.println("Saldo atual: R$" + saldo);
     }
 }
