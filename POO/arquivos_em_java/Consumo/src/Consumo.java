@@ -1,69 +1,79 @@
-import java.io.File;
+/* Biblioteca para usar listas dinâmicas (ArrayList) */
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+/* Biblioteca para representar e manipular arquivos */
+import java.io.File;
+/* Biblioteca para leitura de dados de arquivos */
 import java.util.Scanner;
-
-class Temperaturas {
-
+/* Biblioteca para classificação dos registros */
+import java.util.Comparator;
+ 
+class Consumo {
+ 
     public static void main(String[] args) throws Exception {
-
-        ArrayList<String> lista = new ArrayList<>();
-
-        File arquivo = new File("src/temperaturas.txt");
-
+ 
+        /* Lista que armazenará os usuários */
+        ArrayList<Usuario> lista = new ArrayList<>();
+ 
+        /* Representa o arquivo consumo.txt */
+        File arquivo = new File("consumo.txt");
+ 
+        /* Scanner usado para ler o arquivo */
         Scanner leitor = new Scanner(arquivo);
-
+ 
+        /* Enquanto houver linhas no arquivo */
         while (leitor.hasNextLine()) {
-            lista.add(leitor.nextLine());
+ 
+            /* Lê uma linha completa */
+            String linha = leitor.nextLine();
+ 
+            /* Divide a linha usando ";" */
+            String[] partes = linha.split(";");
+ 
+            /* Guarda cada parte em variáveis */
+            String nome = partes[0];
+            double consumo = Double.parseDouble(partes[1]);
+ 
+            /* Adiciona usuário na lista */
+            lista.add(new Usuario(nome, consumo));
         }
-
+ 
+        /* Fecha o leitor */
         leitor.close();
-
-        List<String> ordemMeses = List.of(
-            "Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho",
-            "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-        );
-
-        lista.sort(Comparator.comparingInt(linha -> {
-            String mes = linha.split(";")[0];
-            return ordemMeses.indexOf(mes);
-        }));
-
-        /* Calcula a média anual */
-        double somaTemperaturas = 0;
-
-        for (String linha : lista) {
-            String[] partes = linha.split(";");
-            double temperatura = Double.parseDouble(partes[1]);
-            somaTemperaturas += temperatura;
+ 
+        /* Classifica o Arraylist */
+        lista.sort(Comparator.comparing(Usuario::getNome));
+ 
+        /* Calcula o espaço total utilizado */
+        double espacoTotal = 0;
+ 
+        for (Usuario usuario : lista) {
+            espacoTotal += usuario.consumo;
         }
-
-        double mediaAnual = somaTemperaturas / lista.size();
-
-        /* Exibe a tabela */
-        System.out.println("-------------------------------------------");
-        System.out.println("Mês              Temperatura      Diferença");
-        System.out.println("-------------------------------------------");
-
-        for (String linha : lista) {
-
-            String[] partes = linha.split(";");
-
-            String mes = partes[0];
-            double temperatura = Double.parseDouble(partes[1]);
-            double diferenca = temperatura - mediaAnual;
-
-            System.out.printf(
-                "%-15s %10.1f°C %12s%.1f°C\n",
-                mes,
-                temperatura,
-                (diferenca >= 0 ? "+" : ""),
-                diferenca
-            );
+ 
+        /* Mostra os resultados */
+        System.out.println("--------------------------------------------------------");
+        System.out.println("Nr.   Usuário           Espaço utilizado        % do uso");
+        System.out.println("--------------------------------------------------------");
+ 
+        /* Mostra resultados */
+        int i = 1;
+ 
+        for (Usuario usuario : lista) {
+ 
+            double espacoUtilizado = usuario.consumo / 1024 / 1024;
+            double porcentagemUso = (usuario.consumo / espacoTotal) * 100;
+ 
+            System.out.printf("%-5d %-15s %15.2f MB %15.2f\n", i, usuario.nome, espacoUtilizado, porcentagemUso);
+ 
+            i++;
         }
-
-        System.out.println("-------------------------------------------");
-        System.out.printf("Temperatura média anual: %.1f°C\n", mediaAnual);
+ 
+        System.out.println("--------------------------------------------------------");
+        
+        /* Calcula a média de espaço ocupado */
+        double media = espacoTotal / lista.size();
+ 
+        System.out.printf("Espaço total ocupado: %.2f MB\n", espacoTotal / 1024 / 1024);
+        System.out.printf("Espaço médio ocupado: %.2f MB\n", media / 1024 / 1024);
     }
 }
