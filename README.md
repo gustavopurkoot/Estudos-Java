@@ -56,15 +56,15 @@ Repositório dedicado aos meus estudos em **Java**, contendo exercícios, exempl
      │   ┣ 📂 Main        → Pessoa com ArrayList
      │   └ 📂 Atividade   → Produto com ArrayList
      ┣ 📂 Datas_e_horas_em_java
-     ┣ 📂 Exemplo     → LocalDate, LocalTime, ZonedDateTime, Period, Duration
-     └ 📂 Atividades
-     │  ┣ 📂 Atividade1  → Sistema de estacionamento
-     │  └ 📂 Atividade2  → Cálculo de horas trabalhadas
+     │   ┣ 📂 Exemplo     → LocalDate, LocalTime, ZonedDateTime, Period, Duration
+     │   └ 📂 Atividades
+     │     ┣ 📂 Atividade1  → Sistema de estacionamento
+     │     └ 📂 Atividade2  → Cálculo de horas trabalhadas
      └ 📂 erros_e_excecoes
-     ┣ 📂 Exemplo     → Validação de idade com throw
-     └ 📂 Atividades
-        ┣ 📂 Atividade1  → Consulta em vetor com ArrayIndexOutOfBoundsException
-        └ 📂 Atividade2  → Validação de nota com IllegalArgumentException
+        ┣ 📂 Exemplo     → Validação de idade com throw
+        └ 📂 Atividades
+           ┣ 📂 Atividade1  → Consulta em vetor com ArrayIndexOutOfBoundsException
+           └ 📂 Atividade2  → Validação de nota com IllegalArgumentException
 ```
 
 ---
