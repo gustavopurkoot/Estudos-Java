@@ -20,6 +20,7 @@ Repositório dedicado aos meus estudos em **Java**, contendo exercícios, exempl
 | POO — Associação entre Classes | Relacionamentos entre objetos |
 | POO — Classes, Objetos e ArrayList | Combinação de POO com listas |
 | Datas e Horas | `LocalDate`, `LocalTime`, `ZonedDateTime`, `Period`, `Duration` |
+| Erros e Exceções | `try/catch/finally`, `throw`, `IllegalArgumentException`, `ArrayIndexOutOfBoundsException` |
 
 ---
 
@@ -54,11 +55,16 @@ Repositório dedicado aos meus estudos em **Java**, contendo exercícios, exempl
      ┣ 📂 Classes_Objetos_ArrayList
      │   ┣ 📂 Main        → Pessoa com ArrayList
      │   └ 📂 Atividade   → Produto com ArrayList
-     └ 📂 Datas_e_horas_em_java
-         ┣ 📂 Exemplo     → LocalDate, LocalTime, ZonedDateTime, Period, Duration
-         └ 📂 Atividades
-             ┣ 📂 Atividade1
-             └ 📂 Atividade2
+     ┣ 📂 Datas_e_horas_em_java
+     ┣ 📂 Exemplo     → LocalDate, LocalTime, ZonedDateTime, Period, Duration
+     └ 📂 Atividades
+     │  ┣ 📂 Atividade1  → Sistema de estacionamento
+     │  └ 📂 Atividade2  → Cálculo de horas trabalhadas
+     └ 📂 erros_e_excecoes
+     ┣ 📂 Exemplo     → Validação de idade com throw
+     └ 📂 Atividades
+        ┣ 📂 Atividade1  → Consulta em vetor com ArrayIndexOutOfBoundsException
+        └ 📂 Atividade2  → Validação de nota com IllegalArgumentException
 ```
 
 ---
@@ -79,6 +85,9 @@ Modelagem de relacionamentos reais: sistemas de biblioteca (Cliente, Livro, Empr
 
 ### 📅 Datas e Horas
 Uso completo da API `java.time`: `LocalDate`, `LocalTime`, `ZonedDateTime`, `Period`, `Duration`, `ChronoUnit` e `DateTimeFormatter`, incluindo leitura de datas via `Scanner`.
+
+### ⚠️ Erros e Exceções
+Tratamento de erros com `try/catch/finally` e lançamento manual de exceções com `throw`. Exemplos incluem validação de dados de entrada e acesso seguro a vetores.
 
 ---
 
