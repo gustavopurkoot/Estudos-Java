@@ -1,5 +1,3 @@
-package estruturas_de_repeticao;
-
 public class atividade1 {
     public static void main(String[] args) {
         int i = 1;

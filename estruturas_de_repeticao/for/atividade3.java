@@ -1,6 +1,4 @@
-package estruturas_de_repeticao;
-
-public class atividade6 {
+public class atividade3 {
     public static void main(String[] args) {
         int anterior = 1, atual = 1;
 

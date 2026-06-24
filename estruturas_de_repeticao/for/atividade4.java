@@ -1,6 +1,4 @@
-package estruturas_de_repeticao;
-
-public class atividade7 {
+public class atividade4 {
     public static void main(String[] args) {
         float resultado = 0;
         for (int i = 1, j = 100; i <=100; i++, j--) {

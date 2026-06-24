@@ -1,5 +1,3 @@
-package metodos;
-
 public class atividade3 {
     
     public static float media (float a, float b, float c) {

@@ -1,5 +1,3 @@
-package metodos;
-
 import java.util.*;
 
 public class atividade8 {

@@ -1,4 +1,4 @@
-package vetor;
+package vetor.Exemplos.Exemplo1;
 
 public class exemplo {
     public static void main(String[] args) {

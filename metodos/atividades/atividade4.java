@@ -1,5 +1,3 @@
-package metodos;
-
 public class atividade4 {
 
     public static float multiplicacao(float a, float b) {

@@ -1,4 +1,4 @@
-package vetor;
+package vetor.Atividades;
 
 import java.util.Scanner;
 

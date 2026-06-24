@@ -1,8 +1,6 @@
-package estruturas_de_repeticao;
-
 import java.util.Scanner;
 
-public class atividade8 {
+public class atividade4 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

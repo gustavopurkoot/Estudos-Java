@@ -1,5 +1,3 @@
-package estruturas_de_repeticao;
-
 public class atividade2 {
     public static void main(String[] args) {
         int soma = 0;
