@@ -16,7 +16,7 @@ class atividade3 {
         System.out.print("Operacao: ");
         operacao = scanner.nextFloat();
         
-        /* Alimeta a lista de operacoes */
+        /* Alimenta a lista de operacoes */
         while(operacao != 0){
             operacoes.add(operacao);
             
