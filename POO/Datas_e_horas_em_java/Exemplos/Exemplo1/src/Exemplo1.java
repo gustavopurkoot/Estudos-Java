@@ -1,3 +1,4 @@
+package POO.Datas_e_horas_em_java.Exemplos.Exemplo1.src;
 /*
 1 - TRABALHANDO COM DATAS (LocalDate)
 
@@ -203,7 +204,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class Exemplo {
+public class Exemplo1 {
     public static void main(String[] args) {
 
         /* Cria um Scanner para leitura de entrada do usuário */
