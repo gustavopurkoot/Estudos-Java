@@ -112,7 +112,7 @@ Tratamento de erros com `try/catch/finally` e lançamento manual de exceções c
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/gustavopurkoot/Java.git
+git clone https://github.com/gustavopurkoot/Estudos-Java.git
 ```
 
 2. Abra o projeto no VS Code
