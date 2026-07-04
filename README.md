@@ -28,6 +28,7 @@ Repositório dedicado aos meus estudos em **Java**, contendo exercícios, exempl
 
 ```
 📦 Java
+ ┣ 📂 Classes
  ┣ 📂 estruturas_sequenciais
  ┣ 📂 estruturas_condicionais
  ┣ 📂 estruturas_de_repeticao
