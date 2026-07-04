@@ -47,7 +47,7 @@ Repositório dedicado aos meus estudos em **Java**, contendo exercícios, exempl
      ┣ 📂 Heranca
      │   ┣ 📂 Main        → Pessoa, Aluno, Professor
      │   └ 📂 Atividade   → ItemBiblioteca, Livro, DVD
-     ┣ 📂 Assosiacao_entre_classes
+     ┣ 📂 Associacao_entre_classes
      │   ┣ 📂 Main        → Cliente e Pedido
      │   └ 📂 Atividades
      │       ┣ 📂 Biblioteca  → Cliente, Livro, Empréstimo
