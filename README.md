@@ -53,6 +53,9 @@ Repositório dedicado aos meus estudos em **Java**, contendo exercícios, exempl
      │   └ 📂 Atividades
      │       ┣ 📂 Biblioteca  → Cliente, Livro, Empréstimo
      │       └ 📂 Clinica     → Pessoa, Medico, Paciente, Consulta
+     ┣ 📂 Enumeracoes_Composicao
+     │   ┣ 📂 Enumeracao
+     │   └ 📂 Composicao
      ┣ 📂 Classes_Objetos_ArrayList
      │   ┣ 📂 Main        → Pessoa com ArrayList
      │   └ 📂 Atividade   → Produto com ArrayList
