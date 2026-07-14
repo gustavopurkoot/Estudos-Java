@@ -18,6 +18,8 @@ Repositório dedicado aos meus estudos em **Java**, contendo exercícios, exempl
 | POO — Encapsulamento | `private`, `getters` e `setters` |
 | POO — Herança | `extends`, sobrescrita de métodos (`@Override`) |
 | POO — Associação entre Classes | Relacionamentos entre objetos |
+| POO — Enumerações | `enum`, constantes tipadas |
+| POO — Composição | Relação "tem-um" entre classes |
 | POO — Classes, Objetos e ArrayList | Combinação de POO com listas |
 | Datas e Horas | `LocalDate`, `LocalTime`, `ZonedDateTime`, `Period`, `Duration` |
 | Erros e Exceções | `try/catch/finally`, `throw`, `IllegalArgumentException`, `ArrayIndexOutOfBoundsException` |
